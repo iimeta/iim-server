@@ -74,7 +74,6 @@ cors:
   credentials: false
   max_age: 600
 
-
 # 邮件配置
 email:
   host: smtp.xxx.com
