@@ -9,32 +9,6 @@ type EmoticonMessageReq struct {
 	EmoticonId string    `json:"emoticon_id" v:"required"`
 }
 
-// 位置消息
-type CardMessageReq struct {
-	Type       string    `json:"type,omitempty"`
-	UserId     int       `json:"user_id,omitempty" v:"required"`
-	Receiver   *Receiver `json:"receiver,omitempty"`
-	TalkType   int       `json:"talk_type" v:"required|in:1,2"`
-	ReceiverId int       `json:"receiver_id" v:"required"`
-}
-
-// 图文消息
-type MixedMessageReq struct {
-	Type     string          `json:"type,omitempty"`
-	Items    []*MixedMessage `json:"items"`
-	Receiver *Receiver       `json:"receiver,omitempty"`
-	QuoteId  string          `json:"quote_id,omitempty"` // 引用的消息ID
-}
-
-// 发送文件消息接口请求参数
-type MessageFileReq struct {
-	Type       string    `json:"type,omitempty"`
-	Receiver   *Receiver `json:"receiver,omitempty"` // 消息接收者
-	TalkType   int       `json:"talk_type" v:"required|in:1,2"`
-	ReceiverId int       `json:"receiver_id" v:"required"`
-	UploadId   string    `json:"upload_id" v:"required"`
-}
-
 // 代码消息
 type CodeMessageReq struct {
 	Type       string    `json:"type,omitempty"`
@@ -158,9 +132,4 @@ type TalkReadMessage struct {
 type Mention struct {
 	All  int   `json:"all,omitempty"`
 	Uids []int `json:"uids,omitempty"`
-}
-
-type MixedMessage struct {
-	Type    int    `json:"type,omitempty"`
-	Content string `json:"content,omitempty"`
 }
