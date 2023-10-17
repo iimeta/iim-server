@@ -33,7 +33,7 @@ var (
 
 			s.BindHookHandler("/*", ghttp.HookBeforeServe, beforeServeHook)
 
-			s.BindHandler("/wss/default.io", Server)
+			s.BindHandler("/api/ws/message", Server)
 
 			s.Run()
 			return nil

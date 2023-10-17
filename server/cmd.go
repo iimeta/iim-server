@@ -13,5 +13,5 @@ import (
 
 // 提供给iim-client引入使用
 func init() {
-	g.Server().BindHandler("/wss/default.io", cmd.Server)
+	g.Server().BindHandler("/api/ws/message", cmd.Server)
 }
