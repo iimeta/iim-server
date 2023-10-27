@@ -35,6 +35,16 @@ docker run -d \
 ```shell
 docker pull registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.0.0
 ```
+```shell
+docker run -d \
+  --network host \
+  --restart=always \
+  -p 9000:9000 \
+  -v /etc/localtime:/etc/localtime:ro \
+  -v /data/iim-server/manifest/config/config.yaml:/app/manifest/config/config.yaml \
+  --name iim-server \
+  registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.0.0
+```
 
 
 ![Star History Chart](https://api.star-history.com/svg?repos=iimeta/iim-server&type=Date)
