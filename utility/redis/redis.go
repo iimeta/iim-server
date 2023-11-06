@@ -141,6 +141,14 @@ func HSetStr(ctx context.Context, key string, field, value string) (int64, error
 	return HSet(ctx, key, g.MapStrAny{field: value})
 }
 
+func HSetAny(ctx context.Context, key string, field string, value interface{}) (int64, error) {
+	return HSet(ctx, key, g.MapStrAny{field: value})
+}
+
+func HSetNX(ctx context.Context, key, field string, value interface{}) (int64, error) {
+	return master.HSetNX(ctx, key, field, value)
+}
+
 func HGetStr(ctx context.Context, key, field string) (string, error) {
 	reply, err := HGet(ctx, key, field)
 	if err != nil {

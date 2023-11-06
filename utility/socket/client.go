@@ -2,10 +2,14 @@ package socket
 
 import (
 	"context"
+	"fmt"
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/os/grpool"
+	"github.com/gogf/gf/v2/os/gtime"
+	"github.com/iimeta/iim-server/internal/consts"
 	"github.com/iimeta/iim-server/internal/errors"
 	"github.com/iimeta/iim-server/utility/logger"
+	"github.com/iimeta/iim-server/utility/redis"
 	"github.com/iimeta/iim-server/utility/util"
 	"sync/atomic"
 	"time"
@@ -197,6 +201,8 @@ func (c *Client) loopWrite() {
 		select {
 		case <-timer.C:
 			logger.Debugf(ctx, "client empty message cid: %d, uid: %d", c.cid, c.uid)
+			_, _ = redis.HSetNX(ctx, fmt.Sprintf(consts.USER_TIME_LOGIN_KEY, util.DateNumber(), c.uid), consts.FIRST_TIME_FIELD, gtime.Now().Unix())
+			_, _ = redis.HSetAny(ctx, fmt.Sprintf(consts.USER_TIME_LOGIN_KEY, util.DateNumber(), c.uid), consts.LAST_TIME_FIELD, gtime.Now().Unix())
 		case data, ok := <-c.outChan:
 			if !ok || c.Closed() {
 				return // channel closed
