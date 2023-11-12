@@ -6,14 +6,14 @@
 
 [![Release](https://img.shields.io/github/v/release/iimeta/iim-server?color=blue)](https://github.com/iimeta/iim-server/releases)
 [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=green)](https://github.com/iimeta/iim-server/blob/main/LICENSE)
-[![Docker Pull](https://img.shields.io/docker/pulls/iimeta/iim-server?color=brightgreen)](https://hub.docker.com/repository/docker/iimeta/iim-server)
+[![Docker Pull](https://img.shields.io/docker/pulls/iimeta/iim-server?color=brightgreen)](https://hub.docker.com/r/iimeta/iim-server)
 
 </div>
 
 `智元 IM` 是一个网页版即时聊天系统, 同时拥有AI聊天对话功能, 本项目基于[Lumen IM](https://github.com/gzydong/go-chat)使用[GoFrame](https://github.com/gogf/gf)框架开发
 
 ## 手动Docker部署
-0. 先自行安装好Docker
+0. 需提前安装好Redis和MongoDB以及Docker服务
 1. 拉取镜像: docker pull iimeta/iim-server:1.1.0
 2. 创建配置文件目录: mkdir -p /data/iim-server/manifest/config
 5. 进入配置文件目录: cd /data/iim-server/manifest/config
@@ -32,7 +32,7 @@ docker run -d \
 ```
 
 ## 自动Docker部署
-0. 先自行安装好Docker
+0. 需提前安装好Redis和MongoDB以及Docker服务
 1. 下载一键部署脚本: wget https://github.com/iimeta/iim-server/raw/docker/bin/install.sh
 2. 执行安装: chmod +777 install.sh && ./install.sh
 3. 修改配置文件: vi /data/iim-server/manifest/config/config.yaml 按 config.yaml 中配置项的注释, 修改对应参数
