@@ -6,7 +6,7 @@
 
 [![Release](https://img.shields.io/github/v/release/iimeta/iim-server?color=blue)](https://github.com/iimeta/iim-server/releases)
 [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=green)](https://github.com/iimeta/iim-server/blob/main/LICENSE)
-[![Docker Pull](https://img.shields.io/docker/pulls/iimeta/iim-server?color=brightblue)](https://hub.docker.com/repository/docker/iimeta/iim-server)
+[![Docker Pull](https://img.shields.io/docker/pulls/iimeta/iim-server)](https://hub.docker.com/repository/docker/iimeta/iim-server)
 
 </div>
 
