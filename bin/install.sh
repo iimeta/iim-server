@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker pull iimeta/iim-server:1.0.0
+docker pull iimeta/iim-server:1.1.0
 
 mkdir -p /data/iim-server/manifest/config
 

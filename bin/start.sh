@@ -7,4 +7,4 @@ docker run -d \
   -v /etc/localtime:/etc/localtime:ro \
   -v /data/iim-server/manifest/config/config.yaml:/app/manifest/config/config.yaml \
   --name iim-server \
-  iimeta/iim-server:1.0.0
+  iimeta/iim-server:1.1.0
