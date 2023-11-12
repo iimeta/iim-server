@@ -14,7 +14,7 @@
 
 ## 手动Docker部署
 0. 先自行安装好Docker
-1. 拉取镜像: docker pull iimeta/iim-server:1.0.0
+1. 拉取镜像: docker pull iimeta/iim-server:1.1.0
 2. 创建配置文件目录: mkdir -p /data/iim-server/manifest/config
 5. 进入配置文件目录: cd /data/iim-server/manifest/config
 6. 下载配置文件: wget https://github.com/iimeta/iim-server/raw/docker/manifest/config/config.yaml
@@ -28,7 +28,7 @@ docker run -d \
   -v /etc/localtime:/etc/localtime:ro \
   -v /data/iim-server/manifest/config/config.yaml:/app/manifest/config/config.yaml \
   --name iim-server \
-  iimeta/iim-server:1.0.0
+  iimeta/iim-server:1.1.0
 ```
 
 ## 自动Docker部署
@@ -40,7 +40,7 @@ docker run -d \
 
 ## 备用国内镜像地址
 ```shell
-docker pull registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.0.0
+docker pull registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.1.0
 ```
 ```shell
 docker run -d \
@@ -50,7 +50,7 @@ docker run -d \
   -v /etc/localtime:/etc/localtime:ro \
   -v /data/iim-server/manifest/config/config.yaml:/app/manifest/config/config.yaml \
   --name iim-server \
-  registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.0.0
+  registry.cn-hangzhou.aliyuncs.com/iimeta/iim-server:1.1.0
 ```
 
 
