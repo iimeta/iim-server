@@ -1,20 +1,20 @@
 module github.com/iimeta/iim-server
 
-go 1.21
+go 1.22
 
 require (
 	github.com/bwmarrin/snowflake v0.3.0
-	github.com/gogf/gf/contrib/nosql/redis/v2 v2.5.7
-	github.com/gogf/gf/v2 v2.5.7
+	github.com/gogf/gf/contrib/nosql/redis/v2 v2.7.0
+	github.com/gogf/gf/v2 v2.7.0
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/gorilla/websocket v1.5.1
 	github.com/json-iterator/go v1.1.12
 	github.com/orcaman/concurrent-map/v2 v2.0.1
-	github.com/redis/go-redis/v9 v9.3.0
+	github.com/redis/go-redis/v9 v9.5.1
 	github.com/sourcegraph/conc v0.3.0
-	github.com/tidwall/gjson v1.17.0
-	go.mongodb.org/mongo-driver v1.13.1
-	golang.org/x/sync v0.5.0
+	github.com/tidwall/gjson v1.17.1
+	go.mongodb.org/mongo-driver v1.15.0
+	golang.org/x/sync v0.7.0
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 )
 
@@ -52,10 +52,10 @@ require (
 	go.opentelemetry.io/otel/trace v1.14.0 // indirect
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect
-	golang.org/x/crypto v0.14.0 // indirect
-	golang.org/x/net v0.17.0 // indirect
-	golang.org/x/sys v0.13.0 // indirect
-	golang.org/x/text v0.13.0 // indirect
+	golang.org/x/crypto v0.23.0 // indirect
+	golang.org/x/net v0.25.0 // indirect
+	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/text v0.15.0 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
